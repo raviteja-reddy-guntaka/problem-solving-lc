@@ -2,15 +2,15 @@ class Solution {
 public:
     int minimumMoves(string s) {
         
-        int l = s.length(), curr = 0, count = 0;
-        while(curr<l) {
-            if (s[curr] == 'X') {
-                count++;
-                curr += 2;
+        int i = 0, ans = 0;
+        while(i<s.length()) {
+            if (s[i] == 'X') {
+                ans++;
+                i += 2;
             }
-            curr++;
+            i++;
         }
         
-        return count;
+        return ans;
     }
 };
