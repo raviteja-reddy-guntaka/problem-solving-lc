@@ -18,12 +18,12 @@ class Solution {
 //         }
         
         int min = Integer.MAX_VALUE, s_min = Integer.MAX_VALUE;
-        for (int i=0; i<nums.length; i++) {
-            if (nums[i]<=min)
-                min = nums[i];
-            else if (nums[i]<s_min)
-                s_min = nums[i];
-            else if (nums[i]>s_min)
+        for (int n:nums) {
+            if (n<=min)
+                min = n;
+            else if (n<s_min)
+                s_min = n;
+            else if (n>s_min)
                 return true;
         }
         
