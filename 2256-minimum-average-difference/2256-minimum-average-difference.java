@@ -12,8 +12,9 @@ class Solution {
         for (int i=0; i<n; i++) {
             prefixSum = prefixSum + (double)nums[i];
             suffixSum = suffixSum - (double)nums[i];
-            avg = Math.floor(prefixSum/(i+1));
-            if (n-i-1 != 0)
+            if (n-i-1 == 0)
+                avg = Math.floor(prefixSum/(i+1));
+            else
                 avg = Math.abs(Math.floor(prefixSum/(i+1)) - Math.floor(suffixSum/(n-i-1)));
             if (min > avg) {
                 min = avg;
